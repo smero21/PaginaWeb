@@ -1,0 +1,24 @@
+.container {
+    display: flex;
+    flex-direction: center;
+    align-items: center;
+    justify-content: center;
+    padding: 0.5rem 2rem;
+    width: 100%;
+    box-sizing: border-box;
+    position: relative;
+}
+.links {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex: 1;
+}
+a{
+    display: inline-flex;
+    border: none;
+    padding: 0.5rem 1rem;
+}
+.mode {
+    margin-left: auto;
+}

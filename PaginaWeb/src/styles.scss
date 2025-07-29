@@ -1,0 +1,19 @@
+:root {
+  --background:linear-gradient(135deg, #bac2c7 0%, #f3f4f6 100%);
+  --text: #232526;
+}
+
+body {
+  min-height: 100vh;
+  margin: 0;
+  background: var(--background);
+  color: var(--text);
+  font-family: 'Segoe UI', Arial, sans-serif;
+  transition: background 0.3s, color 0.3s;
+}
+
+/* Modo oscuro */
+body.dark-mode {
+  --background: linear-gradient(135deg, #232526 0%, #4d535a 100%);
+  --text: #f1f1f1;
+}
