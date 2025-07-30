@@ -1,10 +1,10 @@
 <nav class="container">
     <div class="links">
-        <a *ngFor="let page of pages" (click)="navigateTo(page)">
+        <a *ngFor="let page of pages" (click)="navigateTo(page)" href="#">
             {{ page ===''? 'Home': page | titlecase}}
         </a>
     </div>
-    <a (click)="toggleDarkMode()" class="mode" >
+    <a (click)="toggleDarkMode()" class="mode" href="#">
         {{ darkModeText }}
     </a>
 </nav>
