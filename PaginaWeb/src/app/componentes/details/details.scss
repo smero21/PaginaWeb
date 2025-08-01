@@ -1,0 +1,45 @@
+.experience {
+    width: 100%;
+    height: 100%;
+    margin: 5rem 0 10rem 0;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+
+    h2 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .experience-item {
+        display: flex;
+        align-items: center;
+        padding-inline-start: 1rem;
+        flex-direction: column;
+        .details{
+            
+            flex-direction: row;
+            display: flex;
+            .job-info {
+            display: flex;
+            text-align: end;
+            margin-left: auto;
+            padding-inline-end: 1rem;
+        }
+        }
+        
+        
+    }
+
+
+    .experience-item:hover {
+        background-color: #d1c7e6;
+        cursor: pointer;
+    }
+
+    .line {
+        border-bottom: 1px solid black;
+        margin: 10px 0;
+    }
+}

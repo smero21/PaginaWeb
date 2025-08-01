@@ -7,5 +7,7 @@ import { Component } from '@angular/core';
   styleUrl: './footer.scss'
 })
 export class Footer {
-
+  toggleDarkMode(){
+    document.getElementsByClassName('contentFooter')[0].classList.toggle('dark-mode');
+  }
 }

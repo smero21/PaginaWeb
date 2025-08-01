@@ -1,3 +1,5 @@
+@use '../../../styles.scss';
+
 .container {
     display: flex;
     flex-direction: center;
@@ -7,21 +9,43 @@
     width: 100%;
     box-sizing: border-box;
     position: relative;
+    padding: 1rem 0;
+    margin-bottom: 2rem;
 }
+
 .links {
     display: flex;
     gap: 1rem;
     justify-content: center;
     flex: 1;
 }
-a{
+
+a {
     display: inline-flex;
     border: none;
     padding: 0.5rem 1rem;
     text-decoration: none;
-    --text: #232526;
 
+    :hover {
+        cursor: pointer;
+    }
+
+    color:var(--text);
 }
+
 .mode {
     margin-left: auto;
+
+    
+        :hover {
+            width: 35px;
+            height: 35px;
+        }
+    
+
+    .mode-theme {
+        width: 30px;
+        height: 30px;
+        transition: transform 0.3s ease;
+    }
 }

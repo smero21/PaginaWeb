@@ -20,7 +20,7 @@ export class NavBar {
     document.body.classList.toggle('dark-mode');
     this.isDarkMode = !this.isDarkMode;
   }
-  get darkModeText() {
-    return this.isDarkMode ? 'Light Mode' : 'Dark Mode';
+  get darkModeContent() {
+    return this.isDarkMode ? 'icons/themes/light' : 'icons/themes/dark';
   }
 }
