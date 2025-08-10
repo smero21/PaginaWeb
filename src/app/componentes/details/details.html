@@ -1,0 +1,16 @@
+<div class="container">
+    <div class="experience-item" (click)="toggleContent()">
+        <div class="details">
+            <h3>{{jobTitle}}</h3>
+            <div class="job-info">
+                {{compayName}}<br>
+                <br>
+                {{date}}
+            </div>
+        </div>
+        <div class="hiden-content" *ngIf="isHide">
+            {{ hideContent }}
+        </div>
+    </div>
+    <div class="line"></div>
+</div>

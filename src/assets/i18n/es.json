@@ -1,0 +1,31 @@
+{
+    "NAV":{
+        "HOME": "Inicio",
+        "BLOG": "Blog",
+        "ABOUT_ME": "Sobre Mi"
+    },
+    "HOME": {
+        "WHO_I_AM":{
+            "TITLE": "Quién Soy",
+            "CONTENT": "Soy Sebastián Méndez, un Ingeniero de Software Jr con pasión por desarrollar soluciones. Me especializo en el desarrollo web, particularmente usando Angular y Node.js. Mi objetivo es construir aplicaciones eficientes, útiles y amigables para el usuario. Tengo un gran interés en aprender nuevas tecnologías. En mi tiempo libre, me gusta explorar nuevos lenguajes de programación y crear nuevos proyectos y soluciones. Siempre estoy ansioso por asumir nuevos desafíos y expandir mis habilidades. ¡Conectemos y creemos algo increíble juntos!"
+        },
+        "EXPERIENCE": {
+            "TITLE": "Experiencia",
+            "JOB_TITLE": "Ingeniero Jr",
+            "COMPANY_NAME": "BitbCorporation",
+            "DATE": "2023/Noviembre - 2025/Enero",
+            "DESCRIPTION": "Implementación y gestión de servidores web en entornos Ubuntu. Consultas y gestión de bases de datos usando SQL en PostgreSQL. Desarrollo de aplicaciones móviles en Ionic y Angular, utilizando Capacitor. Utilización de servicios de notificaciones como OneSignal y prácticas de control de versiones a través de GitLab."
+        },
+        "CONTACT_ME": {
+            "TITLE": "Contáctame",
+            "CONTENT": "No dudes en contactarme por correo electrónico o conectarte conmigo en LinkedIn."
+        },
+        "TECHNOLOGIES": {
+            "TITLE": "Tecnologías de Desarrollo"
+        },
+        "CARDS": {
+            "TITLE": "Sección de Tarjetas",
+            "CONTENT": "Esta sección contiene varias tarjetas que muestran diferentes aspectos de mi trabajo y habilidades."
+        }
+    }
+}

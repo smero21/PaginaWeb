@@ -1,0 +1,37 @@
+.container {
+
+    .experience-item {
+
+
+        padding-inline-start: 1rem;
+        flex-direction: column;
+
+        .details {
+            justify-content: start;
+            display: flex;
+            flex-direction: row;
+
+            .job-info {
+                text-align: end;
+                margin-left: auto;
+                padding-inline-end: 1rem;
+            }
+        }
+
+    }
+
+    .experience-item:hover {
+        //background-color: #6a6279;
+        background-color: azure;
+        cursor: pointer;
+    }
+
+    .hiden-content {
+        padding: 2rem 0 2rem 0;
+    }
+
+    .line {
+        border-bottom: 1px solid black;
+        margin: 10px 0;
+    }
+}

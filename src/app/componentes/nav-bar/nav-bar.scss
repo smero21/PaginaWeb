@@ -1,0 +1,54 @@
+@use '../../../styles.scss';
+
+.container {
+    display: flex;
+    flex-direction: center;
+    align-items: center;
+    justify-content: center;
+    padding: 0.5rem 2rem;
+    width: 100%;
+    box-sizing: border-box;
+    position: relative;
+    padding: 1rem 0;
+    margin-bottom: 2rem;
+    
+}
+span{
+    cursor:pointer;
+    padding: 0 0.5rem;
+}
+.links {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex: 1;
+}
+
+a {
+    display: inline-flex;
+    border: none;
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+
+    :hover {
+        cursor: pointer;
+    }
+}
+
+
+.mode, .language{
+    margin-left: auto;
+
+        :hover {
+            width: 35px;
+            height: 35px;
+            cursor:pointer;
+        }
+    
+
+    .mode-theme, .language-icon {
+        width: 30px;
+        height: 30px;
+        transition: transform 0.3s ease;
+    }
+}

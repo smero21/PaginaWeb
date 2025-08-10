@@ -1,0 +1,32 @@
+{
+    "NAV":{
+        "HOME": "Home",
+        "BLOG": "Blog",
+        "ABOUT_ME": "About Me"
+    },
+    "HOME": {
+        "DESCRIPTION": "This is a place where I share my thoughts and projects.",
+        "WHO_I_AM":{
+            "TITLE": "Who I Am",
+            "CONTENT": "I'm Sebastian Mendez, a Jr Software Engineer with a passion for developing solutions. I specialize in web development, particularly using Angular and Node.js. My goal is to build efficient, useful and user-friendly applications. I have a strong interest in learning new technologies. In my free time, I like to explore new programming languages and create new projects and solutions. I'm always eager to take on new challenges and expand my skill set. Let's connect and create something amazing together!"
+        },
+        "EXPERIENCE": {
+            "TITLE": "Experience",
+            "JOB_TITLE": "Jr Engineer",
+            "COMPANY_NAME": "BitbCorporation",
+            "DATE": "2023/November - 2025/January",
+            "DESCRIPTION": "Implementation and management of web servers in Ubuntu environments. Queries and database management using SQL in PostgreSQL. Mobile application development in Ionic and Angular, using Capacitor. Utilization of notification services like OneSignal and version control practices through GitLab."
+        },
+        "CONTACT_ME": {
+            "TITLE": "Contact Me",
+            "CONTENT": "Feel free to reach out to me via email or connect with me on LinkedIn."
+        },
+        "TECHNOLOGIES": {
+            "TITLE": "Development Technologies"
+        },
+        "CARDS": {
+            "TITLE": "Cards Section",
+            "CONTENT": "This section contains various cards that showcase different aspects of my work and skills."
+        }
+    }
+}

@@ -1,0 +1,13 @@
+<nav class="container">
+    <div class="links">
+        <span *ngFor="let page of pages" (click)="navigateTo(page)">
+            {{ getPageTitle(page) }}
+        </span>
+    </div>
+    <span (click)="toggleDarkMode()" class="mode">
+        <img src="{{ darkModeContent }}.svg" alt="" class="mode-theme">
+    </span>
+    <span (click)="toggleLanguage()" class="language">
+        <img src="{{ languageIcon }}.svg" alt="" class="language-icon">
+    </span>
+</nav>

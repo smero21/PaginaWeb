@@ -1,0 +1,26 @@
+@use '../../../styles.scss';
+
+.contentFooter {
+    padding: 0.5rem 0.5rem;
+    margin-bottom: auto;
+}
+
+a {
+    color: var(--text);
+    text-decoration: none;
+    :hover {
+        width: 35px;
+        height: 35px;
+    }
+}
+
+img {
+    width: 30px;
+    height: 30px;
+    margin-right: 0.5rem;
+}
+
+p {
+    display: block;
+    margin: 0;
+}
