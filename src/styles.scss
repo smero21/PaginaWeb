@@ -2,23 +2,12 @@ html {
   font-size: 19px; 
 }
 
-:root {
-  --background:linear-gradient(135deg, #bac2c7 0%, #f3f4f6 100%);
-  --text: #232526;
-}
-
 body {
   min-height: 100vh;
   margin: 0;
-  padding: 0rem 10rem;
+  padding: 0rem 2rem;
   background: var(--background);
   color: var(--text);
   font-family: 'Roboto', 'PT Sans', sans-serif;
   transition: background 0.3s, color 0.3s;
-}
-
-/* Modo oscuro */
-body.dark-mode {
-  --background: linear-gradient(135deg, #494d4f 0%, #232a33 100%);
-  --text: #ffff;
-}
+} 

@@ -1,11 +1,11 @@
 {
-    "NAV":{
+    "NAV": {
         "HOME": "Inicio",
         "BLOG": "Blog",
         "ABOUT_ME": "Sobre Mi"
     },
     "HOME": {
-        "WHO_I_AM":{
+        "WHO_I_AM": {
             "TITLE": "Quién Soy",
             "CONTENT": "Soy Sebastián Méndez, un Ingeniero de Software Jr con pasión por desarrollar soluciones. Me especializo en el desarrollo web, particularmente usando Angular y Node.js. Mi objetivo es construir aplicaciones eficientes, útiles y amigables para el usuario. Tengo un gran interés en aprender nuevas tecnologías. En mi tiempo libre, me gusta explorar nuevos lenguajes de programación y crear nuevos proyectos y soluciones. Siempre estoy ansioso por asumir nuevos desafíos y expandir mis habilidades. ¡Conectemos y creemos algo increíble juntos!"
         },

@@ -1,46 +1,82 @@
-import { Component, inject } from '@angular/core';
+import { Component, inject, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { CommonModule } from '@angular/common';
-import {App} from '../../app';
+import { State } from '../../servicios/state';
+import { Translate } from '../../servicios/translate';
+import { Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-nav-bar',
-  imports: [ CommonModule],
+  imports: [CommonModule],
   templateUrl: './nav-bar.html',
   styleUrl: './nav-bar.scss'
 })
-export class NavBar {
+export class NavBar implements OnInit {
   private router = inject(Router);
-  pages = ['', 'blog','about-me'];
-  languages = ['icons/languages/spanish', 'icons/languages/english', 'icons/languages/russian'];
-  currentLanguageIndex = 1;
-  isDarkMode = false;
-  constructor(app: App) {
-    //app.currentLanguage=this.languageIcon.;
-    this.isDarkMode=app.isDarkMode;
-    console.log('language index: ', this.currentLanguageIndex);
+  private subs: Subscription[] = [];
+  navHome = '';
+  navAboutMe = '';
+  navBlog = '';
+  pages = ['', 'about-me', 'blog'];
+  currentTheme: 'light' | 'dark' = 'light';
+  currentLanguage: 'es' | 'en' | 'ru' = 'en';
+
+  constructor(private state: State,
+    private translate: Translate) { }
+
+  ngOnInit() {
+    // Suscribirse a cambios
+    this.state.theme$.subscribe(theme => {
+      this.currentTheme = theme;
+      this.applyTheme(theme);
+    });
+
+    this.state.language$.subscribe(lang => {
+      this.currentLanguage = lang;
+    });
+
+    this.subs.push(
+      this.translate.get('NAV.HOME').subscribe(text => this.navHome = text),
+      this.translate.get('NAV.ABOUT_ME').subscribe(text => this.navAboutMe = text),
+      this.translate.get('NAV.BLOG').subscribe(text => this.navBlog = text)
+    );
+
   }
   navigateTo(page: string) {
     this.router.navigate([`/${page}`]);
   }
   getPageTitle(page: string) {
-    if (page === '') return 'Home';
-    if (page === 'about-me') return 'About Me';
-    return page.charAt(0).toUpperCase() + page.slice(1);
+    switch (page) {
+      case '': return this.navHome;
+      case 'about-me': return this.navAboutMe;
+      case 'blog': return this.navBlog;
+      default: return '';
+    }
   }
-  toggleDarkMode() {
-    document.body.classList.toggle('dark-mode');
-    this.isDarkMode = !this.isDarkMode;
-    console.log('Dark mode toggled:', this.isDarkMode);
+  toggleTheme() {
+    const newTheme = this.currentTheme === 'light' ? 'dark' : 'light';
+    console.log("estado: ", this.state.setTheme(newTheme));
+    this.state.setTheme(newTheme);
   }
-  toggleLanguage(){
-    this.currentLanguageIndex = (this.currentLanguageIndex + 1) % this.languages.length;
-    return this.currentLanguageIndex;
+  private applyTheme(theme: 'light' | 'dark') {
+    if (theme === 'dark') {
+      document.body.style.background = 'linear-gradient(135deg, #494d4f 0%, #232a33 100%)';
+      document.body.style.color = '#fff';
+    } else {
+      document.body.style.background = 'linear-gradient(135deg, #a9bbc6ff 0%, #f3f4f6 100%)';
+      document.body.style.color = '#232526';
+    }
   }
-  get darkModeContent() {
-    return this.isDarkMode ? 'icons/themes/light' : 'icons/themes/dark';
+  get themeUrl() {
+    return this.currentTheme === 'dark' ? 'light' : 'dark';
+  }
+
+  toggleLanguage() {
+    const newLanguage = this.currentLanguage === 'en' ? 'es' : (this.currentLanguage === 'es' ? 'ru' : 'en');
+    this.state.setLanguage(newLanguage);
+    window.location.reload();
   }
   get languageIcon() {
-    return this.languages[this.currentLanguageIndex]; 
+    return this.currentLanguage;
   }
 }

@@ -8,6 +8,6 @@ import { Component } from '@angular/core';
 })
 export class Footer {
   toggleDarkMode(){
-    document.getElementsByClassName('contentFooter')[0].classList.toggle('dark-mode');
+    //document.getElementsByClassName('contentFooter')[0].classList.toggle('dark-mode');
   }
 }

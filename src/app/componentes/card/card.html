@@ -1,7 +1,13 @@
 <div class="card">
-    <img *ngIf="image" [src]="image" alt="Imagen del card" class="card-img">
+    @if (image) {
+        <img [src]="image" alt="Imagen del card" class="card-img">
+    }
+    <h2 class="card-title">{{ title }}</h2>
     <div class="card-content">
-        <h3 class="card-title">{{ title }}</h3>
+        
+        
+        <ng-content></ng-content>
+        
         <p class="card-text">{{ content }}</p>
     </div>
 </div>

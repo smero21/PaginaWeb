@@ -1,12 +1,11 @@
 {
-    "NAV":{
+    "NAV": {
         "HOME": "Home",
         "BLOG": "Blog",
         "ABOUT_ME": "About Me"
     },
     "HOME": {
-        "DESCRIPTION": "This is a place where I share my thoughts and projects.",
-        "WHO_I_AM":{
+        "WHO_I_AM": {
             "TITLE": "Who I Am",
             "CONTENT": "I'm Sebastian Mendez, a Jr Software Engineer with a passion for developing solutions. I specialize in web development, particularly using Angular and Node.js. My goal is to build efficient, useful and user-friendly applications. I have a strong interest in learning new technologies. In my free time, I like to explore new programming languages and create new projects and solutions. I'm always eager to take on new challenges and expand my skill set. Let's connect and create something amazing together!"
         },

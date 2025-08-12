@@ -8,7 +8,9 @@ import { CommonModule } from '@angular/common';
   styleUrl: './card.scss'
 })
 export class Card {
+  @Input() Header: string = '';
   @Input() title: string = '';
   @Input() content: string = '';
   @Input() image: string | null = null;
+  
 }

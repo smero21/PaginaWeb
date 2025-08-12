@@ -2,19 +2,21 @@
     <app-nav-bar></app-nav-bar>
 </header>
 <main>
-
-    <div class="container">
-        <img src="images/picture.jpg" alt="Personal Image" class="personalimage" />
-        <h2>Who I Am</h2>
-        <p>
-            I'm Sebastian Mendez, a Jr Software Engineer with a passion for developing solutions. I specialize in web
+    <div class="info">
+        <!--app-card title="Who I Am" content="I'm Sebastian Mendez, a Jr Software Engineer with a passion for developing solutions. I specialize in web
             development, particularly using Angular and Node.js. My goal is to build efficient, useful and user-friendly
             applications.
             I have a strong interest in learning new technologies. In my free time, I like to explore new programming
             languages and create new projects and solutions.
             I'm always eager to take on new challenges and expand my skill set. Let's connect and create something
-            amazing together!
-        </p>
+            amazing together!" 
+            >
+
+            <img src="images/picture.jpg" alt="Personal Image" class="personalimage" />
+        </app-card-->
+        <h2>{{whoIAmTitle}}</h2>
+        <img src="images/picture.jpg" alt="Personal Image" class="personalimage" />
+        <p>{{whoIAmContent}}</p>
         <p>You can dowload my CV here</p>
         <div class="download-container">
             <a href="documents/Cv Sebastian Mendez.pdf" download="Sebastian_Mendez_CV.pdf">
@@ -24,14 +26,13 @@
 
     </div>
     <div class="contact-info">
-        <h2>Contact Me</h2>
-        <p>Feel free to reach out to me via email or connect with me on the following apps.</p>
-        
+        <h2>{{contactTitle}}</h2>
+        <p>{{contactContent}}</p>        
     </div>
     <div class="experience">
-        <h2>Experience</h2>
-        <app-details jobTitle="Jr Engineer" compayName="BitbCorporation" date="2023/november - 2025/january"
-            hideContent="Implementation and management of web servers in Ubuntu environments. Queries and database management using SQL in PostgreSQL. Mobile application development in Ionic and Angular, using Capacitor. Utilization of notification services like OneSignal and version control practices through GitLab.">
+        <h2>{{expTitle}}</h2>
+        <app-details jobTitle="{{expJobTitle}}" compayName="{{expCopany}}" date="{{expDate}}"
+            hideContent="{{expDescription}}">
         </app-details>
     </div>
 
@@ -39,9 +40,11 @@
         <app-card title="Jr Engineer" content="Este es el contenido del card.">
         </app-card>
     </div>
-    <h2>Development Technologies</h2>
-    <div class="devImages">
-        <img *ngFor="let image of images" [src]="'images/devimages/' + image" alt="">
+    <h2>{{techsTitle}}</h2>
+    <div class="devImages container">
+        @for (image of images; track $index) {
+            <img [src]="'images/devimages/' + image" alt="Development Image">
+        }
     </div>
 
 </main>
