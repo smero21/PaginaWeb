@@ -10,7 +10,7 @@ import { Subscription } from 'rxjs';
 @Component({
   selector: 'app-home',
   imports: [NavBar,
-    Card,
+    //Card,
     Footer,
     CommonModule,
     Details

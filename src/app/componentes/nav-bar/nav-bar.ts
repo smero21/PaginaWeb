@@ -19,7 +19,7 @@ export class NavBar implements OnInit {
   navBlog = '';
   pages = ['', 'about-me', 'blog'];
   currentTheme: 'light' | 'dark' = 'light';
-  currentLanguage: 'es' | 'en' | 'ru' = 'en';
+  currentLanguage: 'es' | 'en' | 'ru' | 'de' = 'en';
 
   constructor(private state: State,
     private translate: Translate) { }
@@ -72,7 +72,7 @@ export class NavBar implements OnInit {
   }
 
   toggleLanguage() {
-    const newLanguage = this.currentLanguage === 'en' ? 'es' : (this.currentLanguage === 'es' ? 'ru' : 'en');
+    const newLanguage = this.currentLanguage === 'en' ? 'es' : (this.currentLanguage === 'es' ? 'ru' : (this.currentLanguage === 'ru' ? 'de' : 'en'));
     this.state.setLanguage(newLanguage);
     window.location.reload();
   }

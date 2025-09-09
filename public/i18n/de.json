@@ -1,0 +1,32 @@
+{
+    "NAV": {
+        "HOME": "Startseite",
+        "BLOG": "Blog",
+        "ABOUT_ME": "Über mich"
+    },
+    "HOME": {
+        "WHO_I_AM": {
+            "TITLE": "Wer ich bin",
+            "CONTENT": "Ich bin Sebastian Mendez, ein Junior Softwareentwickler mit einer Leidenschaft für die Entwicklung von Lösungen. Ich spezialisiere mich auf Webentwicklung, insbesondere mit Angular und Node.js. Mein Ziel ist es, effiziente, nützliche und benutzerfreundliche Anwendungen zu erstellen. Ich habe ein starkes Interesse daran, neue Technologien zu erlernen. In meiner Freizeit erkunde ich gerne neue Programmiersprachen und erstelle neue Projekte und Lösungen. Ich bin immer bereit, neue Herausforderungen anzunehmen und meine Fähigkeiten zu erweitern. Lassen Sie uns verbinden und gemeinsam etwas Großartiges schaffen!"
+        },
+        "EXPERIENCE": {
+            "TITLE": "Erfahrung",
+            "JOB_TITLE": "Junior Ingenieur",
+            "COMPANY_NAME": "BitbCorporation",
+            "DATE": "2023/November - 2025/Januar",
+            "DESCRIPTION": "Implementierung und Verwaltung von Webservern in Ubuntu-Umgebungen. Abfragen und Datenbankverwaltung mit SQL in PostgreSQL. Entwicklung mobiler Anwendungen in Ionic und Angular unter Verwendung von Capacitor. Nutzung von Benachrichtigungsdiensten wie OneSignal und Versionskontrollpraktiken über GitLab."
+        },
+        "CONTACT_ME": {
+            "TITLE": "Kontaktieren Sie mich",
+            "CONTENT": "Zögern Sie nicht, mich per E-Mail zu kontaktieren oder sich mit mir auf LinkedIn zu verbinden."
+        },
+        "TECHNOLOGIES": {
+            "TITLE": "Entwicklungstechnologien"
+        },
+        "CARDS": {
+            "TITLE": "Kartenabschnitt",
+            "CONTENT": "Dieser Abschnitt enthält verschiedene Karten, die verschiedene Aspekte meiner Arbeit und Fähigkeiten präsentieren."
+        }
+    }
+
+}

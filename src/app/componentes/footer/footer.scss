@@ -3,9 +3,12 @@
 .contentFooter {
     padding: 0.5rem 0.5rem;
     margin-bottom: auto;
+    padding-bottom: 2rem;
+    border-radius: 10px 10px 0 0;
+    //background: linear-gradient(135deg, rgb(130, 154, 169) 0%, #d2d7dc 100%);
 }
 
-a {
+a { 
     color: var(--text);
     text-decoration: none;
     :hover {
@@ -19,8 +22,10 @@ img {
     height: 30px;
     margin-right: 0.5rem;
 }
-
-p {
-    display: block;
-    margin: 0;
+.container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
 }
+

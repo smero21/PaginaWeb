@@ -6,7 +6,7 @@ import { BehaviorSubject } from 'rxjs';
 })
 export class State {
   private currentTheme = new BehaviorSubject<'light' | 'dark'>('light');
-  private currentLanguage = new BehaviorSubject<'es' | 'en' | 'ru'>('en');
+  private currentLanguage = new BehaviorSubject<'es' | 'en' | 'ru' | 'de'>('en');
 
   theme$ = this.currentTheme.asObservable();
   language$ = this.currentLanguage.asObservable();
@@ -20,7 +20,7 @@ export class State {
     const savedLang = localStorage.getItem('language');
     
     if (savedTheme) this.currentTheme.next(savedTheme as 'light' | 'dark');
-    if (savedLang) this.currentLanguage.next(savedLang as 'es' | 'en' | 'ru');
+    if (savedLang) this.currentLanguage.next(savedLang as 'es' | 'en' | 'ru' | 'de');
   }
 
   setTheme(theme: 'light' | 'dark') {
@@ -28,7 +28,7 @@ export class State {
     localStorage.setItem('theme', theme);
   }
 
-  setLanguage(lang: 'es' | 'en' | 'ru') {
+  setLanguage(lang: 'es' | 'en' | 'ru'| 'de') {
     this.currentLanguage.next(lang);
     localStorage.setItem('language', lang);
   }
