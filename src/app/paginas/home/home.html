@@ -2,25 +2,18 @@
     <app-nav-bar></app-nav-bar>
 </header>
 <main>
-    <div class="info">
-        <h2>{{whoIAmTitle}}</h2>
-        <br>
-        <div class="info-content"> <p>{{whoIAmContent}}</p>
-        
-        <!--p>You can dowload my CV here</p>
-        <div class="download-container">
-            <a href="documents/Cv Sebastian Mendez.pdf" download="Sebastian_Mendez_CV.pdf">
-                <img src="icons/curriculum-vitae-resume-svgrepo-com.svg" alt="" class="cv-icon" />
-            </a>
-        </div--></div>
-       <img src="images/picture.jpg" alt="Personal Image" class="personalimage" />
-
+    <div class="info card" name="card">
+        <div class="info-image">
+            <h2 class="hidden">{{whoIAmTitle}}</h2>
+            <img src="images/picture.jpg" alt="Personal Image" class="personalimage" />
+        </div>
+        <div class="info-text">
+            <h2>{{whoIAmTitle}}</h2>
+            <p>{{whoIAmContent}}</p>
+        </div>
     </div>
 
-    <div class="contact-info">
-        <h2>{{contactTitle}}</h2>
-        <p>{{contactContent}}</p>        
-    </div>
+
     <div class="experience">
         <h2>{{expTitle}}</h2>
         <app-details jobTitle="{{expJobTitle}}" compayName="{{expCopany}}" date="{{expDate}}"
@@ -28,17 +21,54 @@
         </app-details>
     </div>
 
-    <!--div class="cards">
-        <app-card title="Jr Engineer" content="Este es el contenido del card.">
-        </app-card>
-    </div-->
-    <h2>{{techsTitle}}</h2>
-    <div class="devImages container">
-        @for (image of images; track $index) {
-            <img [src]="'images/devimages/' + image" alt="Development Image">
-        }
+
+    <div class="dev-tech container">
+        <h2>{{techsTitle}}</h2>
+
+        <div class="dev-images">
+            @for (image of images; track $index) {
+            <div class="img-container">
+                <img [src]="'images/devimages/' + image +'.svg'" alt="Development Image">
+                <h4>{{image}}</h4>
+            </div>
+            }
+        </div>
+
     </div>
 
+
+    <div class="contact-info card" name="card">
+        <h2>{{contactTitle}}</h2>
+        <div class="content">
+            <p>{{contactContent}}</p>
+            <div class="social-media">
+                <div class="personal-contact-element">
+                    <img src="icons/gmail.svg" alt="">
+                    <a type="email">sebastianmendez0806@gmail.com</a>
+                </div>
+                <div class="personal-contact-element">
+                    <img src="icons/whatsapp.svg" alt="">
+                    <p>+57 312 332 9717</p> 
+                </div>
+            </div>
+            <div class="platforms">
+                <a href="https://www.linkedin.com/in/sebastian-960374249/" target="_blank" rel="noopener noreferrer">
+                    <fa-icon [icon]="['fab','linkedin']" size="2x" class="fa-icon" color="black" />
+                </a>
+                <a href="https://github.com/smero21" target="_blank" rel="noopener noreferrer">
+                    <fa-icon [icon]="['fab','github']" size="2x" class="fa-icon" />
+                </a>
+            </div>
+
+
+            <div class="download-container">
+                <a href="documents/Cv Sebastian Mendez.pdf" download="Sebastian_Mendez_CV.pdf">
+                    <img src="icons/curriculum-vitae-resume-svgrepo-com.svg" alt="" class="cv-icon" />
+                </a>
+                <p>My CV</p>
+            </div>
+        </div>
+    </div>
 </main>
 <footer>
     <app-footer></app-footer>

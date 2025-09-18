@@ -6,6 +6,8 @@ import { Details } from '../../componentes/details/details';
 import { CommonModule } from '@angular/common';
 import { Translate } from '../../servicios/translate';
 import { Subscription } from 'rxjs';
+import { fab } from '@fortawesome/free-brands-svg-icons';
+import { FontAwesomeModule, FaIconLibrary } from '@fortawesome/angular-fontawesome';
 
 @Component({
   selector: 'app-home',
@@ -13,7 +15,8 @@ import { Subscription } from 'rxjs';
     //Card,
     Footer,
     CommonModule,
-    Details
+    Details,
+    FontAwesomeModule
   ],
   templateUrl: './home.html',
   styleUrl: './home.scss'
@@ -30,7 +33,11 @@ export class Home implements OnInit {
   contactContent = '';
   techsTitle = '';
   private subs: Subscription[] = [];
-  constructor(private translate: Translate) { }
+  constructor(private translate: Translate,
+    private faIconLibrary: FaIconLibrary
+  ) { 
+    faIconLibrary.addIconPacks(fab);
+  }
   ngOnInit() {
     this.subs.push(
       this.translate.get('HOME.WHO_I_AM.TITLE').subscribe(text => this.whoIAmTitle = text),
@@ -48,15 +55,15 @@ export class Home implements OnInit {
   }
 
   images = [
-    "angular-original-wordmark.svg",
-    "docker-original-wordmark.svg",
-    "java-original-wordmark.svg",
-    "mysql-original-wordmark.svg",
-    "postgresql-original-wordmark.svg",
-    "postman-original.svg",
-    "python-original.svg",
-    "ibm--app-connect-enterprise.svg",
-    "ibm--mq.svg"
+    "Angular",
+    "Docker",
+    "Java",
+    "Mysql",
+    "Postgresql",
+    "Postman",
+    "Python",
+    "Ibm-app-connect",
+    "Ibm-mq"
   ];
 
 }

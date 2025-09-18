@@ -18,7 +18,7 @@
         },
         "CONTACT_ME": {
             "TITLE": "Contact Me",
-            "CONTENT": "Feel free to reach out to me via email or connect with me on LinkedIn."
+            "CONTENT": "Feel free to reach out to me via email or connect with me on LinkedIn or my Github. You can also download my CV. "
         },
         "TECHNOLOGIES": {
             "TITLE": "Development Technologies"
@@ -27,5 +27,11 @@
             "TITLE": "Cards Section",
             "CONTENT": "This section contains various cards that showcase different aspects of my work and skills."
         }
+    },
+    "ABOUT-ME": {},
+    "BLOG": {
+        "TITLE": "Blog Section",
+        "CONTENT": "This section contains various blog posts that discuss different topics related to my work and interests.",
+        "COMING_SOON": "Coming Soon..."
     }
 }

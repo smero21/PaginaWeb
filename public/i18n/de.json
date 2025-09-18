@@ -18,7 +18,7 @@
         },
         "CONTACT_ME": {
             "TITLE": "Kontaktieren Sie mich",
-            "CONTENT": "Zögern Sie nicht, mich per E-Mail zu kontaktieren oder sich mit mir auf LinkedIn zu verbinden."
+            "CONTENT":"Dieser Abschnitt enthält verschiedene Blog-Beiträge, die verschiedene Themen im Zusammenhang mit meiner Arbeit und meinen Interessen behandeln."
         },
         "TECHNOLOGIES": {
             "TITLE": "Entwicklungstechnologien"
@@ -27,6 +27,17 @@
             "TITLE": "Kartenabschnitt",
             "CONTENT": "Dieser Abschnitt enthält verschiedene Karten, die verschiedene Aspekte meiner Arbeit und Fähigkeiten präsentieren."
         }
+    }, 
+    "ABOUT-ME": {
+
+    },
+    "BLOG": {
+       
+            "TITLE": "Blog-Bereich",
+            "CONTENT": "Dieser Abschnitt enthält verschiedene Blog-Beiträge, die verschiedene Themen im Zusammenhang mit meiner Arbeit und meinen Interessen behandeln.",
+            "COMING_SOON": "Demnächst..."
+        
     }
+
 
 }

@@ -1,27 +1,16 @@
-@use '../../../styles.scss';
-
 .contentFooter {
     padding: 0.5rem 0.5rem;
-    margin-bottom: auto;
+    width: 80%;
+    margin: auto;
     padding-bottom: 2rem;
-    border-radius: 10px 10px 0 0;
     //background: linear-gradient(135deg, rgb(130, 154, 169) 0%, #d2d7dc 100%);
 }
 
-a { 
-    color: var(--text);
-    text-decoration: none;
-    :hover {
-        width: 35px;
-        height: 35px;
-    }
+.fa-icon:hover{
+    cursor: pointer;
+    color: #774d83;
 }
 
-img {
-    width: 30px;
-    height: 30px;
-    margin-right: 0.5rem;
-}
 .container{
     display: flex;
     flex-direction: row;

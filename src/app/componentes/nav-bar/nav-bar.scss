@@ -6,20 +6,24 @@
     align-items: center;
     justify-content: center;
     padding: 0.5rem 2rem;
-    width: 100%;
+    width: 80%;
     box-sizing: border-box;
     position: relative;
     padding: 1rem 0;
     margin-bottom: 2rem;
-    
+    margin: 0 auto 2rem auto;
+}
+.logo{
+    background-color: green;
+    padding: 5px;
+    cursor:auto;
 }
 span{
     cursor:pointer;
     padding: 0 0.5rem;
 }
 .links {
-    display: flex;
-    gap: 1rem;
+    display: flex;  
     justify-content: center;
     flex: 1;
 }
@@ -38,14 +42,7 @@ a {
 
 .mode, .language{
     margin-left: auto;
-
-        :hover {
-            width: 35px;
-            height: 35px;
-            cursor:pointer;
-        }
     
-
     .mode-theme, .language-icon {
         width: 30px;
         height: 30px;

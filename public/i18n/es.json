@@ -18,7 +18,7 @@
         },
         "CONTACT_ME": {
             "TITLE": "Contáctame",
-            "CONTENT": "No dudes en contactarme por correo electrónico o conectarte conmigo en LinkedIn."
+            "CONTENT": "No dudes en contactarme por correo electrónico o conectarte conmigo en LinkedIn o revisar mi Github."
         },
         "TECHNOLOGIES": {
             "TITLE": "Tecnologías de Desarrollo"
@@ -27,5 +27,15 @@
             "TITLE": "Sección de Tarjetas",
             "CONTENT": "Esta sección contiene varias tarjetas que muestran diferentes aspectos de mi trabajo y habilidades."
         }
+    }, 
+    "ABOUT-ME": {
+
+    },
+    "BLOG": {
+        
+            "TITLE": "Sección de Blog",
+            "CONTENT": "Esta sección contiene varias publicaciones de blog que discuten diferentes temas relacionados con mi trabajo e intereses.",
+            "COMING_SOON": "Próximamente..."
+        
     }
 }

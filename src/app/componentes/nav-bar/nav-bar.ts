@@ -1,4 +1,4 @@
-import { Component, inject, OnInit } from '@angular/core';
+import { Component, inject, OnInit, AfterViewInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { State } from '../../servicios/state';
@@ -11,7 +11,7 @@ import { Subscription } from 'rxjs';
   templateUrl: './nav-bar.html',
   styleUrl: './nav-bar.scss'
 })
-export class NavBar implements OnInit {
+export class NavBar implements OnInit, AfterViewInit {
   private router = inject(Router);
   private subs: Subscription[] = [];
   navHome = '';
@@ -42,13 +42,17 @@ export class NavBar implements OnInit {
     );
 
   }
+  ngAfterViewInit() {
+    // Aplica el tema después de que la vista se haya inicializado
+    this.applyTheme(this.currentTheme);
+  }
   navigateTo(page: string) {
     this.router.navigate([`/${page}`]);
   }
   getPageTitle(page: string) {
     switch (page) {
       case '': return this.navHome;
-      case 'about-me': return this.navAboutMe;
+      //case 'about-me': return this.navAboutMe;
       case 'blog': return this.navBlog;
       default: return '';
     }
@@ -58,13 +62,31 @@ export class NavBar implements OnInit {
     console.log("estado: ", this.state.setTheme(newTheme));
     this.state.setTheme(newTheme);
   }
+
+  private getElementToToggleStyle(selector: string, value: string) {
+    document.querySelectorAll(`[name='${selector}']`).forEach(element => {
+      (element as HTMLElement).style.background = value;
+    });
+  }
   private applyTheme(theme: 'light' | 'dark') {
     if (theme === 'dark') {
       document.body.style.background = 'linear-gradient(135deg, #494d4f 0%, #232a33 100%)';
       document.body.style.color = '#fff';
+      document.querySelectorAll(".card").forEach(element => {
+        (element as HTMLElement).style.background = '#414d5cff';
+      });
+      document.querySelectorAll(".img-container").forEach(element => {
+        (element as HTMLElement).style.background = '#4c5055ff';
+      });
     } else {
-      document.body.style.background = 'linear-gradient(135deg, #a9bbc6ff 0%, #f3f4f6 100%)';
+      document.body.style.background = 'linear-gradient(135deg, #9aabb6ff 0%, #f3f4f6 100%)';
       document.body.style.color = '#232526';
+      document.querySelectorAll(".card").forEach(element => {
+        (element as HTMLElement).style.background = '#8d9db1ff';
+      });
+      document.querySelectorAll(".img-container").forEach(element => {
+        (element as HTMLElement).style.background = '#b2c7d7ff';
+      });
     }
   }
   get themeUrl() {
